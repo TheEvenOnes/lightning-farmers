@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/FX/LightingSparkingFX.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/FX/FireAndSmokeFX.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/FX/StormCloudsFX.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Spatial"]
+
+[node name="Level" type="Node" parent="."]
+
+[node name="Level" type="Spatial" parent="Level"]
+
+[node name="LightingSparkingFX" parent="Level/Level" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+
+[node name="FireAndSmokeFX" parent="Level/Level" instance=ExtResource( 2 )]
+
+[node name="StormCloudsFX" parent="Level/Level" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
+
+[node name="StormCloudsFX2" parent="Level/Level" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7 )
+
+[node name="StormCloudsFX3" parent="Level/Level" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -14 )
+
+[node name="StormCloudsFX4" parent="Level/Level" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -10 )
+
+[node name="FX" type="Node" parent="."]
+
+[node name="Overworld" type="Node" parent="."]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.0758862, 0.751366, -0.655507, 0, 0.657403, 0.753539, 0.997117, 0.0571832, -0.0498878, -11.2227, 12.4013, -3.32805 )
